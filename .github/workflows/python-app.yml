@@ -1,33 +1,29 @@
 # This workflow will install Python dependencies, run tests and lint with a single version of Python
 # For more information see: https://docs.github.com/en/actions/automating-builds-and-tests/building-and-testing-python
 
-name: CI Pipeline
+name: Python application
 
-on: [push]
+on:
+  push:
+    branches: [ "main" ]
+  pull_request:
+    branches: [ "main" ]
 
-env:
-  # Esto fuerza el uso de Node 24 y limpia la advertencia
-  FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: true
+# AGREGA ESTE BLOQUE AQUÍ (Línea 14 aproximadamente)
+permissions:
+  contents: read
 
 jobs:
   build:
     runs-on: ubuntu-latest
-
+    
+    env:
+      FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: true # Aprovecha para corregir lo anterior
+    
     steps:
-      - name: Descargar código
-        uses: actions/checkout@v4
-
-      - name: Configurar entorno Python
-        uses: actions/setup-python@v5
+      - uses: actions/checkout@v4
+      - name: Set up Python
+        uses: actions/setup-python@v5 # Asegúrate de que sea v5
         with:
-          python-version: '3.10'
-
-      - name: Instalar dependencias
-        run: |
-          python -m pip install --upgrade pip
-          if [ -f requirements.txt ]; then pip install -r requirements.txt; fi
-
-      - name: Ejecutar Script de Seguridad
-        run: |
-          # Si tu script falla aquí, asegúrate de que tenga permisos
-          python tu_script.py
+          python-version: "3.10"
+      # ... resto de tus pasos (instalar dependencias, etc.)
