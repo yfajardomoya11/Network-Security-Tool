@@ -1,3 +1,27 @@
+import os
+from dotenv import load_dotenv
+
+# 1. CARGAR CONFIGURACIÓN (Siempre al inicio)
+load_dotenv()
+
+# 2. ASIGNAR VARIABLES
+usuario = os.getenv('NET_USER')
+password = os.getenv('NET_PASS')
+
+# 3. LÓGICA DEL PROGRAMA
+def conectar_dispositivos():
+    # Aquí es donde usarás 'usuario' y 'password'
+    # para leer tu archivo dispositivos.txt y conectarte
+    print(f"Iniciando sesión con el usuario: {usuario}")
+    
+    with open("dispositivos.txt", "r") as archivo:
+        for linea in archivo:
+            ip = linea.strip()
+            print(f"Conectando a la IP: {ip}...")
+
+# 4. PUNTO DE ENTRADA
+if __name__ == "__main__":
+    conectar_dispositivos()
 import getpass
 import time
 from netmiko import ConnectHandler
