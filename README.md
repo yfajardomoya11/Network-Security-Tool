@@ -162,5 +162,9 @@ Centralized logging integration (SIEM-ready)
 Web dashboard for orchestration
 
 
-Compliance templates (CIS / NIST)
+Compliance templates (CIS / NIST)     
+
+  ***PRUEBA DE FUNCIONAMIENTO**
+
+  <img width="1504" height="802" alt="Captura de pantalla 2026-03-15 142230" src="https://github.com/user-attachments/assets/8b2cc19e-bfa9-47de-b1df-9ab243b04d90" />
 
