@@ -56,11 +56,18 @@ Modern networks demand precision, speed, and resilience.
 ---
 
 ## 🛠️ Project Structure
+
 Sentinel-BlueShield/
+
+
 ├── backups/           # Secure configuration vault
+
 ├── main.py            # Core automation engine
+
 ├── dispositivos.txt   # Target device list
+
 ├── requirements.txt   # Dependencies (Netmiko)
+
 └── README.md
 
 
