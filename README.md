@@ -62,7 +62,10 @@ Sentinel-BlueShield/
 ├── dispositivos.txt   # Target device list
 ├── requirements.txt   # Dependencies (Netmiko)
 └── README.md
----## ⚙️ Installation & Deployment### 1️⃣ Clone Repository```bashgit clone https://github.com/yfajardomoya11/Network-Security-Automator.git
+
+
+---## ⚙️ Installation & Deployment### 1️⃣ Clone Repository```bashgit clone https://github.com/yfajardomoya11/SENTINEL-BLUESHIELD
+.git
 2️⃣ Install Dependencies
 pip install -r requirements.txt
 3️⃣ Configure Targets
